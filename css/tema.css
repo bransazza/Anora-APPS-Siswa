@@ -1,0 +1,100 @@
+/* ANORA siswa — tema.css: penyegaran tampilan + penyesuaian iPhone dan Android.
+   Dimuat PALING AKHIR di index.html, jadi menimpa aturan di berkas CSS lain.
+   Ingin kembali ke tampilan lama? Hapus satu baris <link> ke berkas ini. */
+:root{
+  --radius:20px;--radius-kecil:12px;
+  --bayang:0 12px 32px rgba(11,31,92,.11);
+  --bayang-kecil:0 2px 12px rgba(11,31,92,.08);
+  --aman-atas:env(safe-area-inset-top,0px);--aman-bawah:env(safe-area-inset-bottom,0px);
+  --aman-kiri:env(safe-area-inset-left,0px);--aman-kanan:env(safe-area-inset-right,0px);
+  color-scheme:light;
+}
+html{-webkit-tap-highlight-color:rgba(13,71,161,.14)}
+body{min-height:100vh;min-height:100dvh;background:linear-gradient(180deg,#F6F9FE 0,#EAF0FC 100%);overflow-x:clip;-webkit-font-smoothing:antialiased}
+a,button,label,summary,select{touch-action:manipulation}
+input,select,textarea{font-size:max(16px,1rem)} /* mencegah iPhone memperbesar halaman saat kolom diketik */
+h1,h2,h3{letter-spacing:-.005em}
+
+/* ---- Tombol: lebih besar dan terasa "ditekan" ---- */
+.tombol{min-height:48px;padding:.65rem 1.5rem;box-shadow:0 3px 0 rgba(11,31,92,.16);transition:transform .12s,box-shadow .12s,background-color .15s}
+.tombol:active{transform:translateY(2px);box-shadow:0 1px 0 rgba(11,31,92,.16)}
+.tombol-utama{background:linear-gradient(180deg,#1A5BC4,#0D47A1)}
+.tombol-utama:hover{background:linear-gradient(180deg,#1A5BC4,#0A3A85)}
+.tombol-emas{background:linear-gradient(180deg,#FFD43B,#FBB024)}
+.tombol-garis,.tombol[disabled]{box-shadow:none}
+.tombol-besar{min-height:56px}
+.ikon-tombol{width:48px;height:48px}
+
+/* ---- Kartu dan daftar ---- */
+.kartu,.stat,.sesi,.kartu-pilih,.bab,.kartu-tryout,.nilai-kartu,.kuis-utama,.kuis-panel,.ulasan,.panduan,.kartu-peringatan{border-radius:var(--radius);box-shadow:var(--bayang-kecil)}
+.kartu-pilih,.bab,.kartu-tryout{transition:transform .15s,box-shadow .15s,border-color .15s}
+.kartu-pilih:hover,.bab:hover{transform:translateY(-2px);box-shadow:var(--bayang)}
+.halaman-kepala h1{font-size:clamp(1.6rem,6vw,2.2rem)}
+.stat-nilai{background:linear-gradient(135deg,var(--royal),var(--tengah));-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.badge{font-size:.88rem}
+.keadaan{padding:2.5rem 1rem}
+
+/* ---- Header aplikasi dan menu samping ---- */
+.app-header{min-height:calc(64px + var(--aman-atas));padding:calc(.4rem + var(--aman-atas)) calc(1rem + var(--aman-kanan)) .4rem calc(1rem + var(--aman-kiri));background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) blur(12px);backdrop-filter:saturate(1.4) blur(12px);box-shadow:var(--bayang-kecil)}
+.sidebar{padding-top:calc(1rem + var(--aman-atas));padding-bottom:calc(1rem + var(--aman-bawah));overscroll-behavior:contain}
+.menu-tautan{min-height:52px;border-radius:14px}
+.menu-tautan .ikon{color:var(--royal)}
+.menu-tautan[aria-current="page"]{background:linear-gradient(90deg,#DCE7FA,#EAF1FD)}
+.konten{padding-left:calc(1rem + var(--aman-kiri));padding-right:calc(1rem + var(--aman-kanan))}
+
+/* ---- Bilah menu bawah (HP) ---- */
+.bawah-nav{display:none}
+@media (max-width:899px){
+  .bawah-nav{position:fixed;left:0;right:0;bottom:0;z-index:25;display:grid;grid-template-columns:repeat(5,1fr);padding:0 var(--aman-kanan) var(--aman-bawah) var(--aman-kiri);background:rgba(255,255,255,.96);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-top:1px solid var(--garis);box-shadow:0 -6px 20px rgba(11,31,92,.07)}
+  .bn-tautan{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.15rem;min-height:62px;padding:.4rem .1rem;border:0;background:none;color:var(--lembut);font:inherit;font-size:.78rem;font-weight:800;text-decoration:none;cursor:pointer}
+  .bn-tautan .ikon{width:26px;height:26px}
+  .bn-tautan[aria-current="page"]{color:var(--royal)}
+  .bn-tautan[aria-current="page"]::before{content:"";position:absolute;top:0;left:22%;right:22%;height:4px;border-radius:0 0 6px 6px;background:var(--emas)}
+  .bn-tautan .kunci-kecil{position:absolute;top:6px;right:calc(50% - 26px);margin:0;color:var(--lembut)}
+  .bn-tautan .kunci-kecil .ikon{width:14px;height:14px}
+  .konten{padding-bottom:calc(92px + var(--aman-bawah))}
+  body.mode-fokus .bawah-nav{display:none}
+  body.mode-fokus .konten{padding-bottom:calc(1.5rem + var(--aman-bawah))}
+}
+
+/* ---- Beranda promosi ---- */
+.lp-header{padding-top:var(--aman-atas);-webkit-backdrop-filter:saturate(1.4) blur(10px);backdrop-filter:saturate(1.4) blur(10px)}
+.lp-wadah{padding-left:calc(1.25rem + var(--aman-kiri));padding-right:calc(1.25rem + var(--aman-kanan))}
+.hero h1{font-size:clamp(2.1rem,8vw,3.5rem);line-height:1.12}
+.hero-sub{font-size:1.15rem}
+.logo-kartu{border-radius:36px}
+.mapel{box-shadow:var(--bayang)}
+.buku,.penutup{box-shadow:var(--bayang)}
+@media (max-width:560px){
+  .hero-teks .tombol,.penutup .tombol{width:100%}
+  .lp-bagian{padding:2.25rem 0}
+}
+.panel-login{padding-top:calc(1rem + var(--aman-atas));padding-bottom:calc(2rem + var(--aman-bawah));padding-right:calc(1.5rem + var(--aman-kanan));overscroll-behavior:contain}
+
+/* ---- Materi, latihan, try out ---- */
+.opsi-kartu{min-height:68px;padding:1rem}
+.opsi-isi{font-size:1.15rem}
+.opsi-input:checked + .opsi-kartu{box-shadow:inset 6px 0 0 var(--royal),var(--bayang-kecil)}
+.timer-bar{top:calc(64px + var(--aman-atas));border-radius:16px;box-shadow:var(--bayang-kecil)}
+@media (max-width:899px){
+  .timer-waktu{font-size:1.75rem}
+  .kuis-nav{position:sticky;bottom:0;z-index:12;margin:1.25rem -1.25rem -1.25rem;padding:.9rem 1.25rem calc(.9rem + var(--aman-bawah));background:linear-gradient(180deg,rgba(255,255,255,0),#fff 30%);border-radius:0 0 var(--radius) var(--radius)}
+  .kuis-nav .tombol{min-height:52px}
+  .kuis-panel{padding-bottom:calc(1.1rem + var(--aman-bawah));overscroll-behavior:contain}
+  .kuis-panel::before{content:"";display:block;width:46px;height:5px;margin:-.3rem auto .8rem;border-radius:99px;background:var(--garis)}
+  .dlg-latar{align-items:end;padding:0}
+  .dlg{width:100%;max-width:none;border-radius:24px 24px 0 0;padding-bottom:calc(1.4rem + var(--aman-bawah))}
+}
+.skor-kartu{position:relative;overflow:hidden}
+.skor-kartu::before,.skor-kartu::after{content:"";position:absolute;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle,rgba(255,212,59,.35),transparent 70%)}
+.skor-kartu::before{top:-60px;left:-40px}
+.skor-kartu::after{bottom:-70px;right:-30px}
+.skor-kartu>*{position:relative}
+
+/* ---- Pembaca PDF: notch iPhone dan layar landscape ---- */
+.pembaca{overscroll-behavior:none}
+.pb-atas{padding-top:calc(.25rem + var(--aman-atas));padding-left:calc(.75rem + var(--aman-kiri));padding-right:calc(.75rem + var(--aman-kanan))}
+.pb-bawah{padding-left:calc(.75rem + var(--aman-kiri));padding-right:calc(.75rem + var(--aman-kanan))}
+.pb-panggung{overscroll-behavior:contain}
+.pb-bawah .tombol{min-height:52px}
+.pb-halaman{font-size:1.05rem}

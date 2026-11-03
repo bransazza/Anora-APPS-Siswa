@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ANORA — Bimbel SD Matematika dan Bahasa Indonesia</title>
+  <meta name="description" content="ANORA: bimbel SD kelas 1–6 untuk Matematika dan Bahasa Indonesia, dengan materi PDF atau media belajar, latihan soal berpembahasan, dan pantauan untuk orang tua.">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#0B1F5C">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="ANORA">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/landing.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/reader.css">
+  <link rel="stylesheet" href="css/quiz.css">
+  <link rel="stylesheet" href="css/tema.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <a class="lewati" href="#" data-lewati>Lewati ke konten utama</a>
+
+  <noscript><p class="banner banner-galat">Website ini memerlukan JavaScript. Aktifkan JavaScript di browser Anda.</p></noscript>
+
+  <!-- Layar pembuka singkat saat sesi diperiksa -->
+  <div id="muat-awal" class="muat-awal" role="status">
+    <img src="assets/logo.png" alt="ANORA" width="168" height="112">
+    <p>Memuat…</p>
+  </div>
+
+  <!-- ===================== BERANDA PROMOSI ===================== -->
+  <div id="landing" hidden>
+    <header class="lp-header">
+      <div class="lp-wadah lp-header-isi">
+        <img class="lp-logo-kecil" src="assets/logo.png" alt="ANORA" width="72" height="48">
+        <button type="button" class="tombol tombol-utama" data-buka-login>Masuk</button>
+      </div>
+    </header>
+
+    <div id="pesan-landing" class="banner" role="status" hidden></div>
+
+    <main id="utama" tabindex="-1">
+      <section class="hero" aria-labelledby="judul-hero">
+        <div class="lp-wadah hero-isi">
+          <div class="hero-teks">
+            <p class="mata-atas">Bimbel SD · Kelas 1–6</p>
+            <h1 id="judul-hero">Pelan-pelan paham, lama-lama jago.</h1>
+            <p class="hero-sub">Matematika dan Bahasa Indonesia dengan materi yang rapi, latihan yang sabar, dan kabar belajar yang sampai ke orang tua.</p>
+            <button type="button" class="tombol tombol-utama tombol-besar" data-buka-login>Masuk</button>
+          </div>
+          <div class="hero-visual">
+            <span class="bintang b1" aria-hidden="true"></span>
+            <span class="bintang b2" aria-hidden="true"></span>
+            <span class="bintang b3" aria-hidden="true"></span>
+            <div class="logo-kartu">
+              <img src="assets/logo.png" alt="Logo ANORA: huruf A dengan orbit emas dan buku terbuka" width="480" height="320">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="lp-bagian" aria-labelledby="judul-keunggulan">
+        <div class="lp-wadah">
+          <h2 id="judul-keunggulan">Belajar yang tidak bikin kewalahan</h2>
+          <div class="buku">
+            <div class="butir">
+              <span class="butir-ikon warna-a"><span class="ikon" data-ikon="buku"></span></span>
+              <div><h3>Satu bab, satu materi</h3><p>Setiap bab berisi satu materi: berkas PDF yang dibaca per halaman, atau media belajar interaktif dari situs lain.</p></div>
+            </div>
+            <div class="butir">
+              <span class="butir-ikon warna-b"><span class="ikon" data-ikon="bintang"></span></span>
+              <div><h3>Latihan yang menjelaskan</h3><p>Setelah mengerjakan, anak melihat jawaban yang benar beserta pembahasannya. Salah pun jadi bahan belajar.</p></div>
+            </div>
+            <div class="butir">
+              <span class="butir-ikon warna-c"><span class="ikon" data-ikon="kalender"></span></span>
+              <div><h3>Orang tua ikut tenang</h3><p>Kehadiran tiap sesi dan catatan parent guide dari bimbel bisa dilihat kapan saja.</p></div>
+            </div>
+            <div class="butir">
+              <span class="butir-ikon warna-d"><span class="ikon" data-ikon="kunci"></span></span>
+              <div><h3>Ruang belajar yang terjaga</h3><p>Akun dibuat langsung oleh admin bimbel, jadi ruang belajar ini hanya untuk siswa yang terdaftar.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="lp-bagian lp-bagian-biru" aria-labelledby="judul-program">
+        <div class="lp-wadah">
+          <h2 id="judul-program">Apa saja yang ada di ANORA</h2>
+          <div class="mapel-grid">
+            <article class="mapel mapel-mat">
+              <p class="mapel-simbol" aria-hidden="true">+ − × ÷</p>
+              <h3>Matematika</h3>
+              <p>Berhitung, pecahan, bangun datar, sampai soal cerita, dibahas satu bab demi satu bab.</p>
+              <ul class="kelas-baris" aria-label="Tersedia untuk kelas 1 sampai 6"><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li></ul>
+            </article>
+            <article class="mapel mapel-bahasa">
+              <p class="mapel-simbol" aria-hidden="true">Aa Bb</p>
+              <h3>Bahasa Indonesia</h3>
+              <p>Membaca, menulis, dan memahami isi bacaan lewat latihan yang pelan tapi pasti.</p>
+              <ul class="kelas-baris" aria-label="Tersedia untuk kelas 1 sampai 6"><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li></ul>
+            </article>
+          </div>
+          <ol class="jalur">
+            <li><strong>Materi PDF atau media belajar</strong>Satu bab, satu materi: dibaca per halaman atau dibuka dari media belajar pilihan bimbel.</li>
+            <li><strong>Latihan soal dengan pembahasan</strong>Salah jadi tahu salahnya di mana.</li>
+            <li><strong>Try Out TKA untuk kelas 6</strong>Simulasi berwaktu per mata pelajaran, boleh diulang.</li>
+            <li><strong>Pantauan kehadiran</strong>Riwayat setiap sesi terlihat jelas.</li>
+            <li><strong>Parent guide</strong>Panduan singkat dari bimbel untuk orang tua di rumah.</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="lp-bagian" aria-labelledby="judul-penutup">
+        <div class="lp-wadah">
+          <div class="penutup gelap">
+            <h2 id="judul-penutup">Sudah punya akun dari bimbel?</h2>
+            <p>Akun siswa dibuat dan dikelola oleh admin bimbel ANORA. Masuk dengan username dan password yang Anda terima.</p>
+            <button type="button" class="tombol tombol-emas tombol-besar" data-buka-login>Masuk</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="lp-footer">
+      <img src="assets/logo.png" alt="ANORA" width="84" height="56">
+      <p>© ANORA</p>
+    </footer>
+
+    <!-- Panel login dari kanan -->
+    <div id="scrim-login" class="scrim" aria-hidden="true"></div>
+    <aside id="panel-login" class="panel-login" role="dialog" aria-modal="true" aria-labelledby="judul-login">
+      <div class="panel-kepala">
+        <img src="assets/logo.png" alt="ANORA" width="96" height="64">
+        <button type="button" class="ikon-tombol" id="tutup-login" aria-label="Tutup panel masuk"><span class="ikon" data-ikon="silang"></span></button>
+      </div>
+      <h2 id="judul-login">Masuk ke ANORA</h2>
+      <p class="lembut">Pakai username dan password dari admin bimbel.</p>
+      <form id="form-login" novalidate>
+        <div class="kolom">
+          <label for="in-username">Username</label>
+          <input id="in-username" name="username" type="text" autocomplete="username" autocapitalize="none" autocorrect="off" spellcheck="false" maxlength="40" required>
+        </div>
+        <div class="kolom">
+          <label for="in-sandi">Password</label>
+          <div class="kolom-sandi">
+            <input id="in-sandi" name="password" type="password" autocomplete="current-password" maxlength="72" required>
+            <button type="button" class="ikon-tombol tombol-mata" id="tombol-mata" aria-pressed="false" aria-label="Tampilkan password"></button>
+          </div>
+        </div>
+        <p id="galat-login" class="galat-form" role="alert" hidden></p>
+        <button type="submit" id="kirim-login" class="tombol tombol-utama tombol-penuh">Masuk</button>
+      </form>
+      <p class="catatan-kecil">Lupa password? Hubungi admin bimbel untuk mengatur ulang.</p>
+    </aside>
+  </div>
+
+  <!-- ===================== APLIKASI SETELAH LOGIN ===================== -->
+  <div id="app" hidden>
+    <header class="app-header">
+      <button type="button" class="ikon-tombol menu-tombol" id="tombol-menu" aria-label="Buka menu" aria-expanded="false" aria-controls="sidebar"><span class="ikon" data-ikon="menu"></span></button>
+      <img class="app-logo" src="assets/logo.png" alt="ANORA" width="66" height="44">
+      <div class="app-pengguna">
+        <span id="nama-anak" class="nama-anak"></span>
+        <span id="lencana-bayar"></span>
+      </div>
+    </header>
+
+    <div class="app-badan">
+      <nav id="sidebar" class="sidebar" aria-label="Menu utama">
+        <ul class="menu">
+          <li><a class="menu-tautan" href="#/beranda" data-rute="/beranda"><span class="ikon" data-ikon="rumah"></span>Beranda</a></li>
+          <li><a class="menu-tautan" href="#/absensi" data-rute="/absensi"><span class="ikon" data-ikon="kalender"></span>Absensi</a></li>
+          <li><a class="menu-tautan" href="#/parent-guide" data-rute="/parent-guide"><span class="ikon" data-ikon="panduan"></span>Parent Guide</a></li>
+          <li data-butuh-lunas><a class="menu-tautan" href="#/materi" data-rute="/materi"><span class="ikon" data-ikon="buku"></span>Materi<span class="kunci-kecil" hidden><span class="ikon" data-ikon="kunci"></span><span class="sr-only">(terkunci)</span></span></a></li>
+          <li data-butuh-lunas><a class="menu-tautan" href="#/try-out" data-rute="/try-out"><span class="ikon" data-ikon="jam"></span>Try Out<span class="kunci-kecil" hidden><span class="ikon" data-ikon="kunci"></span><span class="sr-only">(terkunci)</span></span></a></li>
+          <li data-butuh-lunas><a class="menu-tautan" href="#/nilai" data-rute="/nilai"><span class="ikon" data-ikon="medali"></span>Nilai Saya<span class="kunci-kecil" hidden><span class="ikon" data-ikon="kunci"></span><span class="sr-only">(terkunci)</span></span></a></li>
+          <li class="menu-pemisah"><button type="button" class="menu-tautan" id="tombol-keluar"><span class="ikon" data-ikon="keluar"></span>Keluar</button></li>
+        </ul>
+      </nav>
+      <div id="scrim-menu" class="scrim scrim-menu" aria-hidden="true"></div>
+      <main id="konten" class="konten" tabindex="-1"></main>
+    </div>
+
+    <!-- Bilah menu bawah (hanya tampil di HP) -->
+    <nav class="bawah-nav" aria-label="Menu cepat">
+      <a class="bn-tautan" href="#/beranda" data-rute="/beranda"><span class="ikon" data-ikon="rumah"></span><span>Beranda</span></a>
+      <a class="bn-tautan" href="#/materi" data-rute="/materi" data-butuh-lunas><span class="ikon" data-ikon="buku"></span><span>Materi</span><span class="kunci-kecil" hidden><span class="ikon" data-ikon="kunci"></span><span class="sr-only">(terkunci)</span></span></a>
+      <a class="bn-tautan" href="#/try-out" data-rute="/try-out" data-butuh-lunas><span class="ikon" data-ikon="jam"></span><span>Try Out</span><span class="kunci-kecil" hidden><span class="ikon" data-ikon="kunci"></span><span class="sr-only">(terkunci)</span></span></a>
+      <a class="bn-tautan" href="#/nilai" data-rute="/nilai" data-butuh-lunas><span class="ikon" data-ikon="medali"></span><span>Nilai</span><span class="kunci-kecil" hidden><span class="ikon" data-ikon="kunci"></span><span class="sr-only">(terkunci)</span></span></a>
+      <button type="button" class="bn-tautan" id="bn-menu"><span class="ikon" data-ikon="menu"></span><span>Lainnya</span></button>
+    </nav>
+  </div>
+</body>
+</html>
